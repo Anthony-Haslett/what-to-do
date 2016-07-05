@@ -1,434 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.min.css" />
-	<link rel="stylesheet" href="css/jquery.sticky-footer.min.css">
-	<link rel="stylesheet" href="css/style.css">
-</style>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.min.css" />
+		<link rel="stylesheet" href="css/jquery.sticky-footer.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<header class="text-center">
+			<h1><a href="index.htm" class="logo">What to do</a></h1>
+		</header>
 
-	<header class="text-center">
-		<h1><a href="index.htm" class="logo">What to do</a></h1>
-	</header>
+		<div class="overlay">
+			<div class="expanded row">
+				<!-- side bar -->
+				<div class="large-2 columns results-sidebar-wrapper">
+					<aside>
+						<form method="get" action="">
+							<h4>Adjust your search</h4>
 
-	<div class="overlay">
-		
-		<div class="expanded row">
+							<label>Where are you?</label>
+							<select id="region-dropdown" class="input region" required>
+								<option value="" selected disabled style="display:none">Select Region</option>
+								<option value="scotland">Scotland</option>
+								<option value="north-east">North East</option>
+								<option value="north-west">North West</option>
+								<option value="yorkshire">Yorkshire &amp; Humber</option>
+								<option value="east-midlands">East Midlands</option>
+								<option value="west=midlands">West Midlands</option>
+								<option value="east-of-england">East of England</option>
+								<option value="south-east">South East</option>
+								<option value="south-west">South West</option>
+								<option value="london">London</option>
+							</select>
+							<input type="text" placeholder="Postcode" aria-describedby="exampleHelpText" class="region">
 
-			<!-- side bar -->
-			<div class="large-2 columns results-sidebar-wrapper">
-				<aside>
-					<form method="get" action="">
-						<h4>Adjust your search</h4>
-						
-						<label>Where are you?</label>
-						<select id="region-dropdown" class="input region" required>
-							<option value="" selected disabled style="display:none">Select Region</option>
-							<option value="scotland">Scotland</option>
-							<option value="north-east">North East</option>
-							<option value="north-west">North West</option>
-							<option value="yorkshire">Yorkshire &amp; Humber</option>
-							<option value="east-midlands">East Midlands</option>
-							<option value="west=midlands">West Midlands</option>
-							<option value="east-of-england">East of England</option>
-							<option value="south-east">South East</option>
-							<option value="south-west">South West</option>
-							<option value="london">London</option>
-						</select>
-						<input type="text" placeholder="Postcode" aria-describedby="exampleHelpText" class="region">
+							<label>How far can you travel?</label>
 
-						<label>How far can you travel?</label>
-
-						<div class="slider-container">
-							<div class="slider" data-slider data-initial-start="2" data-end="15" id="travelSlider">
-								<span class="slider-handle"  data-slider-handle role="slider" tabindex="1" id="travelSliderVal"></span>
-								<span class="slider-fill" data-slider-fill></span>
-								<input type="hidden">
-							</div>
-						</div>
-
-						<span class="slider-label value-travel">2 miles</span>
-
-						<label>What's your budget?</label>
-						<div class="slider-container">
-							<div class="slider" data-slider data-initial-start="10" data-initial-end="50" id="budgetSlider">
-								<span class="slider-handle" data-slider-handle role="slider" tabindex="1" id="budgetSliderMin"></span>
-								<span class="slider-fill" data-slider-fill></span>
-								<span class="slider-handle" data-slider-handle role="slider" tabindex="1" id="budgetSliderMax"></span>
-								<input type="hidden">
-								<input type="hidden">
-							</div>
-						</div>
-
-						<span class="slider-label value-budget">£10 - £50</span>
-
-						<h5>Type of activity</h5>
-						<div class="row">
-							<div class="large-6 columns category-list">
-								<ul class="no-bullet category-list">
-									<li><a href="">Amusement Park</a></li>
-									<li><a href="">Nightlife</a></li>
-									<li><a href="">Fun &amp; Games</a></li>
-									<li><a href="" class="selected">Nature &amp; Wildlife</a></li>
-								</ul>
+							<div class="slider-container">
+								<div class="slider" data-slider data-initial-start="2" data-end="15" id="travelSlider">
+									<span class="slider-handle"  data-slider-handle role="slider" tabindex="1" id="travelSliderVal"></span>
+									<span class="slider-fill" data-slider-fill></span>
+									<input type="hidden">
+								</div>
 							</div>
 
-							<div class="large-6 columns category-list">
-								<ul class="no-bullet category-list">
-									<li><a href="">Shopping</a></li>
-									<li><a href="">Museums</a></li>
-									<li><a href="">Spa &amp; Fitness</a></li>
-									<li><a href="">Sightseeing</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<!-- end of custom search -->
-				</form>
-			</aside>
+							<span class="slider-label value-travel">2 miles</span>
 
-			<!-- first column of results -->
-			<div class="large-10 columns">
-				<div class="row expanded">
-					<div class="large-12 columns arrange-wrap">
-						<label>Arrange Results:</label>
-						<select class="sort input">
-							<option value="highest" selected>Highest rating first</option>
-							<option value="nearest">Nearest first</option>
-						</select>
-					</div>
+							<label>What's your budget?</label>
+							<div class="slider-container">
+								<div class="slider" data-slider data-initial-start="10" data-initial-end="50" id="budgetSlider">
+									<span class="slider-handle" data-slider-handle role="slider" tabindex="1" id="budgetSliderMin"></span>
+									<span class="slider-fill" data-slider-fill></span>
+									<span class="slider-handle" data-slider-handle role="slider" tabindex="1" id="budgetSliderMax"></span>
+									<input type="hidden">
+									<input type="hidden">
+								</div>
+							</div>
+
+							<span class="slider-label value-budget">£10 - £50</span>
+
+							<h5>Type of activity</h5>
+							<div class="row">
+								<div class="large-6 columns category-list">
+									<ul class="no-bullet category-list">
+										<li><a href="">Amusement Park</a></li>
+										<li><a href="">Nightlife</a></li>
+										<li><a href="">Fun &amp; Games</a></li>
+										<li><a href="" class="selected">Nature &amp; Wildlife</a></li>
+									</ul>
+								</div>
+
+								<div class="large-6 columns category-list">
+									<ul class="no-bullet category-list">
+										<li><a href="">Shopping</a></li>
+										<li><a href="">Museums</a></li>
+										<li><a href="">Spa &amp; Fitness</a></li>
+										<li><a href="">Sightseeing</a></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+						<!-- end of custom search -->
+					</aside>
 				</div>
 
+
+				<!-- first column of results -->
+				<div class="large-10 columns">
+					<div class="row expanded">
+						<div class="large-12 columns arrange-wrap">
+							<label>Arrange Results:</label>
+							<select class="sort input">
+								<option value="highest" selected>Highest rating first</option>
+								<option value="nearest">Nearest first</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="large-6 columns">
+
+					<div class="row">
+						<div class="large-12 columns result">
+							<div class="small-5 columns">
+								<img src="images/placeholder.png" alt="" width="500px" height="500px">
+							</div>
+
+							<div class="small-7 columns">
+								<h2>Venue/Place Name</h2>
+								<p class="category">
+									Category of activity
+								</p>
+								<table>
+									<tr>
+										<td>Price:</td>
+										<td>From £20</td>
+									</tr>
+									<tr>
+										<td>Distance:</td>
+										<td>3.5 miles</td>
+									</tr>
+									<tr>
+										<td>Opening hours:</td>
+										<td>9am - 5pm</td>
+									</tr>
+
+									<tr>
+										<td><img src="images/tripadvisor-logo2.png" alt="tripadvisor logo" class="tripadvisor-logo"></td>
+										<td><img src="images/rating-tripadvisor2.png" class="rating" alt="tripadvisor rating"></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+
+						<div class="large-12 columns result">
+							<div class="small-5 columns">
+								<img src="images/placeholder.png" alt="" width="500px" height="500px">
+							</div>
+
+							<div class="small-7 columns">
+								<h2>Venue/Place Name</h2>
+								<p class="category">
+									Category of activity
+								</p>
+								<table>
+									<tr>
+										<td>Price:</td>
+										<td>From £20</td>
+									</tr>
+									<tr>
+										<td>Distance:</td>
+										<td>3.5 miles</td>
+									</tr>
+									<tr>
+										<td>Opening hours:</td>
+										<td>9am - 5pm</td>
+									</tr>
+
+									<tr>
+										<td><img src="images/tripadvisor-logo2.png" alt="tripadvisor logo" class="tripadvisor-logo"></td>
+										<td><img src="images/rating-tripadvisor2.png" class="rating" alt="tripadvisor rating"></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+
+						<div class="large-12 columns result">
+							<div class="small-5 columns">
+								<img src="images/placeholder.png" alt="" width="500px" height="500px">
+							</div>
+
+							<div class="small-7 columns">
+								<h2>Venue/Place Name</h2>
+								<p class="category">
+									Category of activity
+								</p>
+								<table>
+									<tr>
+										<td>Price:</td>
+										<td>From £20</td>
+									</tr>
+									<tr>
+										<td>Distance:</td>
+										<td>3.5 miles</td>
+									</tr>
+									<tr>
+										<td>Opening hours:</td>
+										<td>9am - 5pm</td>
+									</tr>
+
+									<tr>
+										<td><img src="images/tripadvisor-logo2.png" alt="tripadvisor logo" class="tripadvisor-logo"></td>
+										<td><img src="images/rating-tripadvisor2.png" class="rating" alt="tripadvisor rating"></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+
+						<div class="large-12 columns result">
+							<div class="small-5 columns">
+								<img src="images/placeholder.png" alt="" width="500px" height="500px">
+							</div>
+
+							<div class="small-7 columns">
+								<h2>Venue/Place Name</h2>
+								<p class="category">
+									Category of activity
+								</p>
+								<table>
+									<tr>
+										<td>Price:</td>
+										<td>From £20</td>
+									</tr>
+									<tr>
+										<td>Distance:</td>
+										<td>3.5 miles</td>
+									</tr>
+									<tr>
+										<td>Opening hours:</td>
+										<td>9am - 5pm</td>
+									</tr>
+
+									<tr>
+										<td><img src="images/tripadvisor-logo2.png" alt="tripadvisor logo" class="tripadvisor-logo"></td>
+										<td><img src="images/rating-tripadvisor2.png" class="rating" alt="tripadvisor rating"></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end of first column of results -->
+
+				<!-- second column of results -->
 				<div class="large-6 columns">
-				
-				<div class="row">
-					<div class="large-12 columns result">
-						<div class="small-5 columns">
-							<img src="images/placeholder.png" alt="" width="500px" height="500px">
+
+					<div class="row">
+
+						<!-- start of result -->
+						<div class="large-12 columns result">
+
+							<div class="small-5 columns">
+								<img src="images/walton_gardens.png" alt="" width="500px" height="500px">
+							</div>
+
+							<div class="small-7 columns">
+								<h2>Walton Gardens</h2>
+								<p class="category">
+									Nature &amp; Wildlife
+								</p>
+								<table>
+									<tr>
+										<td>Price:</td>
+										<td>From £20</td>
+									</tr>
+									<tr>
+										<td>Distance:</td>
+										<td>3.5 miles</td>
+									</tr>
+									<tr>
+										<td>Opening hours:</td>
+										<td>9am - 5pm</td>
+									</tr>
+
+									<tr>
+										<td><img src="images/tripadvisor-logo2.png" alt="tripadvisor logo" class="tripadvisor-logo"></td>
+										<td><img src="images/rating-tripadvisor2.png" class="rating" alt="tripadvisor rating"></td>
+									</tr>
+								</table>
+							</div>
 						</div>
+						<!-- end of result -->
 
-						<div class="small-7 columns">
-							<h2>Venue/Place Name</h2>
-							<p class="category">
-								Category of activity
-							</p>
-							<table>
-								<tr>
-									<td>Price:</td>
-									<td>From £20</td>
-								</tr>
-								<tr>
-									<td>Distance:</td>
-									<td>3.5 miles</td>
-								</tr>
-								<tr>
-									<td>Opening hours:</td>
-									<td>9am - 5pm</td>
-								</tr>
-								
-								<tr>
-									<td><img src="images/tripadvisor-logo2.png" alt="tripadvisor logo" class="tripadvisor-logo"></td>
-									<td><img src="images/rating-tripadvisor2.png" class="rating" alt="tripadvisor rating"></td>
-								</tr>
-							</table>
+						<!-- start of result -->
+						<div class="large-12 columns result">
+
+							<div class="small-5 columns">
+								<img src="images/walton_gardens.png" alt="" width="500px" height="500px">
+							</div>
+
+							<div class="small-7 columns">
+								<h2>Walton Gardens</h2>
+								<p class="category">
+									Nature &amp; Wildlife
+								</p>
+								<table>
+									<tr>
+										<td>Price:</td>
+										<td>From £20</td>
+									</tr>
+									<tr>
+										<td>Distance:</td>
+										<td>3.5 miles</td>
+									</tr>
+									<tr>
+										<td>Opening hours:</td>
+										<td>9am - 5pm</td>
+									</tr>
+
+									<tr>
+										<td><img src="images/tripadvisor-logo2.png" alt="tripadvisor logo" class="tripadvisor-logo"></td>
+										<td><img src="images/rating-tripadvisor2.png" class="rating" alt="tripadvisor rating"></td>
+									</tr>
+								</table>
+							</div>
 						</div>
-					</div>
+						<!-- end of result -->
 
-					<div class="large-12 columns result">
-						<div class="small-5 columns">
-							<img src="images/placeholder.png" alt="" width="500px" height="500px">
+						<!-- start of result -->
+						<div class="large-12 columns result">
+
+							<div class="small-5 columns">
+								<img src="images/walton_gardens.png" alt="" width="500px" height="500px">
+							</div>
+
+							<div class="small-7 columns">
+								<h2>Walton Gardens</h2>
+								<p class="category">
+									Nature &amp; Wildlife
+								</p>
+								<table>
+									<tr>
+										<td>Price:</td>
+										<td>From £20</td>
+									</tr>
+									<tr>
+										<td>Distance:</td>
+										<td>3.5 miles</td>
+									</tr>
+									<tr>
+										<td>Opening hours:</td>
+										<td>9am - 5pm</td>
+									</tr>
+
+									<tr>
+										<td><img src="images/tripadvisor-logo2.png" alt="tripadvisor logo" class="tripadvisor-logo"></td>
+										<td><img src="images/rating-tripadvisor2.png" class="rating" alt="tripadvisor rating"></td>
+									</tr>
+								</table>
+							</div>
 						</div>
+						<!-- end of result -->
 
-						<div class="small-7 columns">
-							<h2>Venue/Place Name</h2>
-							<p class="category">
-								Category of activity
-							</p>
-							<table>
-								<tr>
-									<td>Price:</td>
-									<td>From £20</td>
-								</tr>
-								<tr>
-									<td>Distance:</td>
-									<td>3.5 miles</td>
-								</tr>
-								<tr>
-									<td>Opening hours:</td>
-									<td>9am - 5pm</td>
-								</tr>
-								
-								<tr>
-									<td><img src="images/tripadvisor-logo2.png" alt="tripadvisor logo" class="tripadvisor-logo"></td>
-									<td><img src="images/rating-tripadvisor2.png" class="rating" alt="tripadvisor rating"></td>
-								</tr>
-							</table>
+						<!-- start of result -->
+						<div class="large-12 columns result">
+
+							<div class="small-5 columns">
+								<img src="images/walton_gardens.png" alt="" width="500px" height="500px">
+							</div>
+
+							<div class="small-7 columns">
+								<h2>Walton Gardens</h2>
+								<p class="category">
+									Nature &amp; Wildlife
+								</p>
+								<table>
+									<tr>
+										<td>Price:</td>
+										<td>From £20</td>
+									</tr>
+									<tr>
+										<td>Distance:</td>
+										<td>3.5 miles</td>
+									</tr>
+									<tr>
+										<td>Opening hours:</td>
+										<td>9am - 5pm</td>
+									</tr>
+
+									<tr>
+										<td><img src="images/tripadvisor-logo2.png" alt="tripadvisor logo" class="tripadvisor-logo"></td>
+										<td><img src="images/rating-tripadvisor2.png" class="rating" alt="tripadvisor rating"></td>
+									</tr>
+								</table>
+							</div>
 						</div>
-					</div>
+						<!-- end of result -->
 
-					<div class="large-12 columns result">
-						<div class="small-5 columns">
-							<img src="images/placeholder.png" alt="" width="500px" height="500px">
+						<!-- start of result -->
+						<div class="large-12 columns result">
+
+							<div class="small-5 columns">
+								<img src="images/walton_gardens.png" alt="" width="500px" height="500px">
+							</div>
+
+							<!-- info result -->
+							<div class="small-7 columns">
+								<h2>Walton Gardens</h2>
+								<p class="category">
+									CNature &amp; Wildlife
+								</p>
+								<table>
+									<tr>
+										<td>Price:</td>
+										<td>From £20</td>
+									</tr>
+									<tr>
+										<td>Distance:</td>
+										<td>3.5 miles</td>
+									</tr>
+									<tr>
+										<td>Opening hours:</td>
+										<td>9am - 5pm</td>
+									</tr>
+
+									<tr>
+										<td><img src="images/tripadvisor-logo2.png" alt="tripadvisor logo" class="tripadvisor-logo"></td>
+										<td><img src="images/rating-tripadvisor2.png" class="rating" alt="tripadvisor rating"></td>
+									</tr>
+								</table>
+							</div>
+							<!-- end of info result -->
 						</div>
-
-						<div class="small-7 columns">
-							<h2>Venue/Place Name</h2>
-							<p class="category">
-								Category of activity
-							</p>
-							<table>
-								<tr>
-									<td>Price:</td>
-									<td>From £20</td>
-								</tr>
-								<tr>
-									<td>Distance:</td>
-									<td>3.5 miles</td>
-								</tr>
-								<tr>
-									<td>Opening hours:</td>
-									<td>9am - 5pm</td>
-								</tr>
-
-								<tr>
-									<td><img src="images/tripadvisor-logo2.png" alt="tripadvisor logo" class="tripadvisor-logo"></td>
-									<td><img src="images/rating-tripadvisor2.png" class="rating" alt="tripadvisor rating"></td>
-								</tr>
-							</table>
-						</div>
-					</div>
-
-					<div class="large-12 columns result">
-						<div class="small-5 columns">
-							<img src="images/placeholder.png" alt="" width="500px" height="500px">
-						</div>
-
-						<div class="small-7 columns">
-							<h2>Venue/Place Name</h2>
-							<p class="category">
-								Category of activity
-							</p>
-							<table>
-								<tr>
-									<td>Price:</td>
-									<td>From £20</td>
-								</tr>
-								<tr>
-									<td>Distance:</td>
-									<td>3.5 miles</td>
-								</tr>
-								<tr>
-									<td>Opening hours:</td>
-									<td>9am - 5pm</td>
-								</tr>
-
-								<tr>
-									<td><img src="images/tripadvisor-logo2.png" alt="tripadvisor logo" class="tripadvisor-logo"></td>
-									<td><img src="images/rating-tripadvisor2.png" class="rating" alt="tripadvisor rating"></td>
-								</tr>
-							</table>
-						</div>
+						<!-- end of result -->
 					</div>
 				</div>
 			</div>
-			<!-- end of first column of results -->
-			
-			<!-- second column of results -->
-			<div class="large-6 columns">
-				
-				<div class="row">
+		</div>
+		<!-- end of overlay -->
 
-					<!-- start of result -->
-					<div class="large-12 columns result">
-
-						<div class="small-5 columns">
-							<img src="images/walton_gardens.png" alt="" width="500px" height="500px">
-						</div>
-
-						<div class="small-7 columns">
-							<h2>Walton Gardens</h2>
-							<p class="category">
-								Nature &amp; Wildlife
-							</p>
-							<table>
-								<tr>
-									<td>Price:</td>
-									<td>From £20</td>
-								</tr>
-								<tr>
-									<td>Distance:</td>
-									<td>3.5 miles</td>
-								</tr>
-								<tr>
-									<td>Opening hours:</td>
-									<td>9am - 5pm</td>
-								</tr>
-
-								<tr>
-									<td><img src="images/tripadvisor-logo2.png" alt="tripadvisor logo" class="tripadvisor-logo"></td>
-									<td><img src="images/rating-tripadvisor2.png" class="rating" alt="tripadvisor rating"></td>
-								</tr>
-							</table>
-						</div>
-					</div>
-					<!-- end of result -->
-
-					<!-- start of result -->
-					<div class="large-12 columns result">
-
-						<div class="small-5 columns">
-							<img src="images/walton_gardens.png" alt="" width="500px" height="500px">
-						</div>
-
-						<div class="small-7 columns">
-							<h2>Walton Gardens</h2>
-							<p class="category">
-								Nature &amp; Wildlife
-							</p>
-							<table>
-								<tr>
-									<td>Price:</td>
-									<td>From £20</td>
-								</tr>
-								<tr>
-									<td>Distance:</td>
-									<td>3.5 miles</td>
-								</tr>
-								<tr>
-									<td>Opening hours:</td>
-									<td>9am - 5pm</td>
-								</tr>
-
-								<tr>
-									<td><img src="images/tripadvisor-logo2.png" alt="tripadvisor logo" class="tripadvisor-logo"></td>
-									<td><img src="images/rating-tripadvisor2.png" class="rating" alt="tripadvisor rating"></td>
-								</tr>
-							</table>
-						</div>
-					</div>
-					<!-- end of result -->
-
-					<!-- start of result -->
-					<div class="large-12 columns result">
-
-						<div class="small-5 columns">
-							<img src="images/walton_gardens.png" alt="" width="500px" height="500px">
-						</div>
-
-						<div class="small-7 columns">
-							<h2>Walton Gardens</h2>
-							<p class="category">
-								Nature &amp; Wildlife
-							</p>
-							<table>
-								<tr>
-									<td>Price:</td>
-									<td>From £20</td>
-								</tr>
-								<tr>
-									<td>Distance:</td>
-									<td>3.5 miles</td>
-								</tr>
-								<tr>
-									<td>Opening hours:</td>
-									<td>9am - 5pm</td>
-								</tr>
-
-								<tr>
-									<td><img src="images/tripadvisor-logo2.png" alt="tripadvisor logo" class="tripadvisor-logo"></td>
-									<td><img src="images/rating-tripadvisor2.png" class="rating" alt="tripadvisor rating"></td>
-								</tr>
-							</table>
-						</div>
-					</div>
-					<!-- end of result -->
-					
-					<!-- start of result -->
-					<div class="large-12 columns result">
-
-						<div class="small-5 columns">
-							<img src="images/walton_gardens.png" alt="" width="500px" height="500px">
-						</div>
-
-						<div class="small-7 columns">
-							<h2>Walton Gardens</h2>
-							<p class="category">
-								Nature &amp; Wildlife
-							</p>
-							<table>
-								<tr>
-									<td>Price:</td>
-									<td>From £20</td>
-								</tr>
-								<tr>
-									<td>Distance:</td>
-									<td>3.5 miles</td>
-								</tr>
-								<tr>
-									<td>Opening hours:</td>
-									<td>9am - 5pm</td>
-								</tr>
-
-								<tr>
-									<td><img src="images/tripadvisor-logo2.png" alt="tripadvisor logo" class="tripadvisor-logo"></td>
-									<td><img src="images/rating-tripadvisor2.png" class="rating" alt="tripadvisor rating"></td>
-								</tr>
-							</table>
-						</div>
-					</div>
-					<!-- end of result -->
-					
-					<!-- start of result -->
-					<div class="large-12 columns result">
-
-						<div class="small-5 columns">
-							<img src="images/walton_gardens.png" alt="" width="500px" height="500px">
-						</div>
-						
-						<!-- info result -->
-						<div class="small-7 columns">
-							<h2>Walton Gardens</h2>
-							<p class="category">
-								CNature &amp; Wildlife
-							</p>
-							<table>
-								<tr>
-									<td>Price:</td>
-									<td>From £20</td>
-								</tr>
-								<tr>
-									<td>Distance:</td>
-									<td>3.5 miles</td>
-								</tr>
-								<tr>
-									<td>Opening hours:</td>
-									<td>9am - 5pm</td>
-								</tr>
-
-								<tr>
-									<td><img src="images/tripadvisor-logo2.png" alt="tripadvisor logo" class="tripadvisor-logo"></td>
-									<td><img src="images/rating-tripadvisor2.png" class="rating" alt="tripadvisor rating"></td>
-								</tr>
-							</table>
-						</div>
-						<!-- end of info result -->
-
-					</div>
-					<!-- end of result -->
-				</div>
-			</div>
-
-			
-				
-
-			</div>
-	</div>
-	<!-- end of overlay -->
-
-	<footer class="text-center">
+		<footer class="text-center">
 			<ul class="links">
 				<li><a href="">Contact us</a></li>
 				<li><a href="">About</a></li>
@@ -438,37 +430,33 @@
 		</footer>
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.min.js"></script>
-	<script src="js/jquery.sticky-footer.min.js"></script>
-	<script src="js/jquery-ui.js"></script>
-	<script src="js/app.js"></script>
-	<script type="text/javascript">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/app.js"></script>
+		<script type="text/javascript">
 
-		/** 
-		 *	Changes the label for the budget slider
-		 */
-		$("#budgetSlider").on("moved.zf.slider", function(){
-			var from = $("#budgetSliderMin").attr("aria-valuenow");
-			var to = $("#budgetSliderMax").attr("aria-valuenow");
-			$(".value-budget").text("£" + from + " - £" + to);
-		});
+			/**
+			 *	Changes the label for the budget slider
+			 */
+			$("#budgetSlider").on("moved.zf.slider", function(){
+				var from = $("#budgetSliderMin").attr("aria-valuenow");
+				var to = $("#budgetSliderMax").attr("aria-valuenow");
+				$(".value-budget").text("£" + from + " - £" + to);
+			});
 
-		/** 
-		*	Changes the label for the travel slider
-		*/
-		$("#travelSlider").on("moved.zf.slider", function(){
-			var value = $("#travelSliderVal").attr("aria-valuenow");
-			$(".value-travel").text(value + " miles");
-		});
+			/**
+			*	Changes the label for the travel slider
+			*/
+			$("#travelSlider").on("moved.zf.slider", function(){
+				var value = $("#travelSliderVal").attr("aria-valuenow");
+				$(".value-travel").text(value + " miles");
+			});
 
 
-		// Sets the fill of the handler to transparent
-		$(".slider-fill").css("background-color", "transparent");
+			// Sets the fill of the handler to transparent
+			$(".slider-fill").css("background-color", "transparent");
 
-		// forces the footer to sit at the bottom of the page
-		$('footer').stickyFooter();
-
-	</script>
+		</script>
 	</body>
-	</html>
+</html>
