@@ -1,0 +1,500 @@
+/**
+ * DEFAULT ELEMENTS
+*/
+html, body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background: url("../images/bg_city_overlay.jpg") no-repeat center center fixed;
+	background-size: cover;
+	font-size: 100%;
+	font-family: "Segoe UI";
+	color: white;
+	overflow-y: auto;
+}
+
+a {
+	font-size: .89rem;
+	color: white;
+}
+
+a:hover {
+	color: white;
+}
+
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style: none;
+}
+
+label {
+	color: white;
+	font-size: 1.2em;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.input,
+input[type="text"] {
+	background: rgba(255,255,255,.8);
+	text-align: center;
+	height: auto;
+}
+
+footer {
+	background-color: #458CCC;
+	bottom: 0;
+}
+
+header {
+	background-color: #458CCC;
+}
+
+table tbody tr:nth-child(even),
+table tbody, table tfoot, table thead {
+	background: transparent;
+	border: 0;
+	margin: 0;
+}
+
+table tbody td, table tbody th {
+	padding: 0;
+	font-size: 1rem;
+}
+
+td img {
+	width: 20%;
+}
+
+.rating,
+.tripadvisor-logo {
+	margin-top: 5px;
+	width: 90px;
+	text-align: right;
+}
+
+	/**
+	 * HEADINGS
+	 */
+	
+	h1 {
+		font-size: 2.2rem;
+		line-height: 80px;
+		margin: 0;
+	}
+
+	h2 {
+		margin-top: 5px;
+		text-align: center;
+		font-size: 1.5rem;
+		text-align: left;
+	}
+
+	h3 {
+		margin-top: 30px;
+		text-align: center;
+	}
+
+	h4 {
+		margin-top: 30px;
+		text-align: center;
+	}
+
+	h5 {
+		padding: 5px;
+		margin: 30px 0;
+	}
+
+	.landing h2 {
+		text-align: center;
+	}
+
+/**
+ * OVERRIDEN FOUNDATION CLASSES
+ */
+.result,
+.details-container,
+.arrange-wrap,
+.columns.landing,
+.columns.results-sidebar-wrapper {
+	background: rgba(68,140,203,0.66);
+}
+
+.columns.landing {
+	background-clip: padding-box;
+	border: 20px solid transparent;
+	border-left: 0px solid transparent;
+	padding: 30px 80px;
+	min-height: 740px;
+}
+
+.row.expanded .row {
+	margin-left: -12px;
+}
+
+.btn.btn-link {
+	background: rgba(255,255,255,.4);
+	display: block;	
+	text-align: center;
+	line-height: 100px;
+	font-size: 2rem;
+	color: white;
+}
+
+.btn.btn-link img {
+	margin-left: 20px;
+}
+
+/**
+ * CUSTOM CLASSES/IDS
+ */
+.logo {
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+	padding: 2px 0;
+	font-size: 2.2rem;
+}
+
+
+.slider {
+	padding: 10px;
+	background: transparent;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+}
+
+.slider-label {
+	margin-top: 10px;
+	font-size: 1.0rem;
+	display: block;
+	text-align: center;
+}
+
+.slider-handle {
+	background: white;
+	height: 50px;
+	width: 15px;
+}
+
+.slider-handle:hover {
+	background: white;
+}
+
+.mapUk {
+	margin: 0 auto;
+	width: 70%;
+	display: block;
+}
+
+#goBtn {
+	background: transparent;
+	border: 0;
+	display: block;
+	margin: auto;
+	font-size: 1.9rem;
+	margin-top: 100px;
+	text-align: center;
+}
+
+.alternativeSearchLabel {
+	display: none;
+}
+
+.links li {
+	font-size: 1.2em;
+	line-height: 60px;
+	display: inline-block;
+	margin-right: 30px;
+}
+
+.links li:after {
+	content: "-";
+	margin-left: 30px;
+}
+
+.links li:last-child:after {
+	content: "";
+}
+
+.increase, .decrease {
+	font-size: 2rem;
+}
+
+.result {
+	background-clip: padding-box;
+	border: 10px solid transparent;
+	border-left: 0px solid transparent;
+	overflow: hidden;
+	padding: 10px;
+}
+
+.result img {
+	max-width: 100%;
+	display: block;
+}
+
+.category {
+	font-size: 1.1rem;
+	padding-bottom: 10px;
+	border-bottom: 1px solid white;
+}
+
+.category-list a {
+	padding: 4px;
+	display: block;
+	margin-bottom: 5px;
+	color: black;
+}
+
+.region {
+	display: inline;
+	width: 49%;
+}
+
+.region {
+	color: grey;
+}
+
+.region option {
+	font-size: .9rem;
+	color: black;
+}
+
+.arrange-wrap  {
+	text-align: center;
+}
+
+.arrange-wrap label {
+	display: inline;
+	font-size: 1.2rem;
+	margin-right: 20px;
+}
+
+.selected:hover {
+	color: white;
+}
+
+.sort {
+	margin-top: 15px;
+	min-width: 200px;
+	max-width: 20%;
+}
+
+.arrange-wrap {
+	background-clip: padding-box;
+	border: 16px solid transparent;
+	border-right: 24px solid transparent;
+}
+
+.selected {
+	background: rgba(255,255,255,0.41);
+}
+
+a.selected {
+	color: white;
+}
+
+.results-sidebar-wrapper {
+	position: fixed;
+}
+
+.results-sidebar-wrapper img {
+	max-width: 60px;
+}
+
+
+.details-container {
+	padding: 20px;
+	background-clip: padding-box;
+	border: 20px solid transparent;
+}
+
+.details-container h2 {
+	font-size: 2rem;
+}
+
+.details-container td {
+	font-size: 1.5rem;
+}
+
+.details-container h4 {
+	font-size: 2rem;
+	border-bottom: 1px solid white;
+	padding-bottom: 10px;
+	margin-bottom: 30px;
+}
+
+.details-container img {
+	width: 100%;
+}
+
+.details-container .rating,
+.details-container .tripadvisor-logo {
+	width: 180px;
+}
+
+.details-container .tripadvisor-logo {
+	float: left;
+}
+
+.details-container .rating {
+	float: right;
+}
+
+
+.social-links {
+	margin-top: 20px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid white;
+}
+
+.share {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.address {
+	margin-top: 20px;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+}
+
+.address p {
+	font-size: 1.1rem;
+	margin: 0;
+}
+
+.address .telephone {
+	margin: 10px 0;
+}
+
+#detailsMap {
+	height: 500px;
+}
+
+.facilities-container {
+	border-bottom: 1px solid white;
+	min-width: 200px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.facilities img {
+	width: 70px;
+	text-align: left;
+}
+
+.facilities li {
+	margin-bottom: 20px;
+	text-align: center;
+	float: left;
+}
+
+.available {
+	color: black;
+	font-size: 2.2rem;
+	font-weight: bolder;
+	margin-left: 20px;
+}
+
+.promotions {
+	border-bottom: 1px solid white;
+}
+
+/**
+ * MEDIA QUERIES
+ */
+@media screen and (max-width: 1050px) {
+	.columns.landing {
+		min-height: 750px;
+	}
+	
+	.sort {
+		max-width: 100%;
+	}
+
+	.results-sidebar-wrapper {
+		position: relative;
+	}
+
+}
+
+@media screen and (max-width: 1000px) {
+	.columns.landing {
+		border: 0px solid transparent;
+		border-left: 0px solid transparent;
+	}
+
+	.category-list {
+		margin: 0px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+
+	/**
+ 	* OVERRIDEN FOUNDATION CLASSES
+ 	*/
+	
+	.columns.landing {
+		padding: 20px;
+		border: 0px;
+		min-height: 120px;
+	}
+
+	.columns {
+		width: 100%;
+		border: 0;
+		margin-bottom: 20px;
+	}
+
+	.columns.category-list {
+		margin-bottom: 0px;
+		padding-bottom: 0;
+	}
+
+	.columns.landing:first-child {
+		margin-bottom: 20px;
+	}
+
+	#goBtn {
+		background: #191919;
+		margin-top: 90px;
+		padding: 20px;
+		width: 100%;
+	}
+
+	/**
+ 	* CUSTOM CLASSES/IDS
+ 	*/
+ 	.mapUk {
+ 		width: 45%;
+ 	}
+
+ 	.alternativeSearchLabel {
+ 		display: inline-block;
+ 		text-align: center;
+ 		font-size: 2rem;
+ 		color: black;
+ 		background: silver;
+ 		width: 100%;
+ 	}
+
+ 	.decrease, .increase {
+ 		display: none;
+ 	}
+
+ 	.category-list {
+		margin: 0px;
+	}
+}
+
