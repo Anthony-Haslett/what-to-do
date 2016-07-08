@@ -4,16 +4,12 @@
 }
 /* Gap between search content sections */
 #custom-search {
-	border-top: 20px solid transparent;
-	border-bottom: 20px solid transparent;
-	border-right: 20px solid transparent;
+	border: 20px solid transparent;
     border-left: 40px solid transparent;
 }
 
 #region-search {
-	border-top: 20px solid transparent;
-	border-bottom: 20px solid transparent;
-	border-left: 20px solid transparent;
+	border: 20px solid transparent;
     border-right: 40px solid transparent;
 }
 
