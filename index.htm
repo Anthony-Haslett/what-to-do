@@ -5,6 +5,7 @@
 		<title>Document</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.min.css" />
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/index.css">
 	</head>
 	<body>
 		<div class="overlay">
@@ -13,7 +14,7 @@
 			</header>
 
 			<div class="row align-stretch">
-				<div class="large-6 columns landing">	<!-- start of custom search -->
+				<div id="custom-search" class="small-12 medium-12 large-6 columns landing">	<!-- start of custom search -->
 					<h2>Custom Search</h2>
 					<form method="get" action="results.htm" >
 						<label>Where are you?</label>
@@ -46,7 +47,7 @@
 					</form>
 				</div>	<!-- end of custom search -->
 
-				<div class="large-6 columns text-center landing">	<!-- start of map search -->
+				<div id="region-search" class="small-12 medium-12 large-6 columns text-center landing">	<!-- start of map search -->
 					<h2>Search by region</h2>
 					<label id="selectedRegion">North West</label>
 					<object type="image/svg+xml" data="images/map_uk_blue.svg" class="mapUk center-block" id="mapUk"></object>
