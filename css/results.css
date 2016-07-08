@@ -1,0 +1,4 @@
+/* Needed for sticky footer on this page */
+.sticky-footer, .overlay:after {
+    height: auto;
+}

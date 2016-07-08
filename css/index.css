@@ -45,13 +45,4 @@
     .mapUk {
  		width: 75%;
  	}
-
-    /* Ensure all footer links fit on mobile displays */
-    .links li {
-        margin-right: 10px;
-    }
-
-    .links li:after {
-        margin-left: 10px;
-    }
 }
