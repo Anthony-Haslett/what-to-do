@@ -12,6 +12,16 @@
 
 .facilities li {
 	margin-bottom: 20px;
-	text-align: center;
+	text-align: left;
 	float: left;
+}
+
+.tripadvisor-logo, .rating {
+    width: 47%;
+    max-width: 47%;
+    margin-top: 20px;
+}
+
+.results-sidebar-wrapper img {
+	max-width: 50px;
 }
