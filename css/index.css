@@ -37,8 +37,23 @@
     #region-search {
         border-right: 20px solid transparent;
     }
+
+    .mapUk {
+ 		width: 45%;
+ 	}
 }
 
 @media screen and (max-width: 640px) {
+    .mapUk {
+ 		width: 75%;
+ 	}
 
+    /* Ensure all footer links fit on mobile displays */
+    .links li {
+        margin-right: 10px;
+    }
+
+    .links li:after {
+        margin-left: 10px;
+    }
 }

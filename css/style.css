@@ -444,17 +444,17 @@ a.selected {
  	* OVERRIDEN FOUNDATION CLASSES
  	*/
 
-	.columns.landing {
+	/*.columns.landing {
 		padding: 20px;
 		border: 0px;
 		min-height: 120px;
-	}
+	}*/
 
-	.columns {
+	/*.columns {
 		width: 100%;
 		border: 0;
 		margin-bottom: 20px;
-	}
+	}*/
 
 	.columns.category-list {
 		margin-bottom: 0px;
@@ -465,19 +465,17 @@ a.selected {
 		margin-bottom: 20px;
 	}
 
-	#goBtn {
+	/*#goBtn {
 		background: #191919;
 		margin-top: 90px;
 		padding: 20px;
 		width: 100%;
-	}
+	}*/
 
 	/**
  	* CUSTOM CLASSES/IDS
  	*/
- 	.mapUk {
- 		width: 45%;
- 	}
+ 	
 
  	.alternativeSearchLabel {
  		display: inline-block;
