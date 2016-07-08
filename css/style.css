@@ -1,3 +1,8 @@
+/**
+ * The last developer had all the css in this one sheet,
+ * so I have tried to spit code into seperate files for now for ease of development.
+ * We can use a build tool to concat them into 1 file later to optimise.
+ **/
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 /**
