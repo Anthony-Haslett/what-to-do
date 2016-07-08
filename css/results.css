@@ -2,3 +2,10 @@
 .sticky-footer, .overlay:after {
     height: auto;
 }
+
+.rating,
+.tripadvisor-logo {
+	margin-top: 5px;
+	width: 90%;
+	text-align: right;
+}
