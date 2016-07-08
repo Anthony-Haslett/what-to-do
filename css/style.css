@@ -1,7 +1,8 @@
 /**
  * The last developer had all the css in this one sheet,
  * so I have tried to spit code into seperate files for now for ease of development.
- * We can use a build tool to concat them into 1 file later to optimise.
+ * At the moment this stylesheet serves as a main one containing code common to all pages.
+ * Later we could use a build tool to concat them into 1 file to optimise.
  **/
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
