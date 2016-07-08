@@ -182,6 +182,11 @@ td img {
 	border-radius: 50%;
 }
 
+/* Removes the ugly blue outline some browsers add */
+.slider-handle:focus {
+    outline: none;
+}
+
 .slider-handle:hover {
 	background: white;
 }
