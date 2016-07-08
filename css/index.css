@@ -2,7 +2,7 @@
     color: #458CCC;
     margin-top: 25px;
 }
-
+/* Gap between search content sections */
 #custom-search {
 	border-top: 20px solid transparent;
 	border-bottom: 20px solid transparent;
@@ -15,4 +15,30 @@
 	border-bottom: 20px solid transparent;
 	border-left: 20px solid transparent;
     border-right: 40px solid transparent;
+}
+
+#goBtn:hover {
+    border-bottom: solid 2px white;
+    border-top: solid 2px white;
+}
+
+@media screen and (max-width: 1200px) {
+    /* Reduce height of blue background as screen shrinks */
+    .columns.landing {
+		min-height: 630px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+    #custom-search {
+        border-left: 20px solid transparent;
+    }
+
+    #region-search {
+        border-right: 20px solid transparent;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
 }

@@ -137,7 +137,7 @@ td img {
 .columns.landing {
 	background-clip: padding-box;
 	padding: 30px 80px;
-	min-height: 740px;
+	min-height: 680px;
 }
 
 .row.expanded .row {
@@ -204,7 +204,7 @@ td img {
 	display: block;
 	margin: auto;
 	font-size: 1.9rem;
-	margin-top: 100px;
+	margin-top: 25px;
 	text-align: center;
 }
 
@@ -417,10 +417,6 @@ a.selected {
  * MEDIA QUERIES
  */
 @media screen and (max-width: 1050px) {
-	.columns.landing {
-		min-height: 750px;
-	}
-
 	.sort {
 		max-width: 100%;
 	}
