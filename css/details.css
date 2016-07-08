@@ -1,0 +1,17 @@
+.available {
+	color: black;
+	font-size: 1.5rem;
+	font-weight: bolder;
+	margin-left: 20px;
+}
+
+.facilities img {
+	width: 30px;
+	text-align: left;
+}
+
+.facilities li {
+	margin-bottom: 20px;
+	text-align: center;
+	float: left;
+}
