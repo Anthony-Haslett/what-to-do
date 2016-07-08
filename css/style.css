@@ -169,12 +169,12 @@ td img {
 	font-size: 2.2rem;
 }
 
-
 .slider {
-	padding: 10px;
-	background: transparent;
+	padding: 0;
+	background: white;
 	border-top: 1px solid white;
 	border-bottom: 1px solid white;
+	border-radius: 5px;
 }
 
 .slider-label {
@@ -186,8 +186,10 @@ td img {
 
 .slider-handle {
 	background: white;
-	height: 50px;
-	width: 15px;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	border: solid 1px #bbb;
 }
 
 .slider-handle:hover {
