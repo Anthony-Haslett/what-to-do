@@ -56,6 +56,24 @@ footer {
 	bottom: 0;
 }
 
+/* Sticky Footer */
+
+.overlay {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -61px;
+}
+
+.overlay:after {
+  content: "";
+  display: block;
+}
+.sticky-footer, .overlay:after {
+  height: 61;
+}
+
+/* end of Sticky Footer */
+
 header {
 	background-color: #458CCC;
 }
@@ -475,7 +493,7 @@ a.selected {
 	/**
  	* CUSTOM CLASSES/IDS
  	*/
- 	
+
 
  	.alternativeSearchLabel {
  		display: inline-block;

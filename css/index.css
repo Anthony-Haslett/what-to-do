@@ -13,6 +13,7 @@
     border-right: 40px solid transparent;
 }
 
+/* Let's Go button hover effect */
 #goBtn:hover {
     border-bottom: solid 2px white;
     border-top: solid 2px white;
@@ -26,6 +27,7 @@
 }
 
 @media screen and (max-width: 1024px) {
+    /* Make the gaps equal size when divs collapse onto next line */
     #custom-search {
         border-left: 20px solid transparent;
     }
