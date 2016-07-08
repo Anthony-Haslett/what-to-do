@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
 /**
  * DEFAULT ELEMENTS
 */
@@ -189,6 +190,7 @@ td img {
 	padding: 0;
 	background: white;
 	border-radius: 5px;
+	height: .1rem;
 }
 
 .slider-label {
@@ -203,7 +205,6 @@ td img {
 	height: 20px;
 	width: 20px;
 	border-radius: 50%;
-	border: solid 1px #bbb;
 }
 
 .slider-handle:hover {
@@ -461,7 +462,7 @@ a.selected {
     .links li:after {
         margin-left: 10px;
     }
-	
+
 	/**
  	* OVERRIDEN FOUNDATION CLASSES
  	*/
