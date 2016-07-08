@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 /**
  * DEFAULT ELEMENTS
 */
@@ -12,7 +13,7 @@ body {
 	background: url("../images/bg_city_overlay.jpg") no-repeat center center fixed;
 	background-size: cover;
 	font-size: 100%;
-	font-family: "Segoe UI";
+	font-family: "Roboto" !important;
 	color: white;
 	overflow-y: auto;
 }
@@ -85,7 +86,7 @@ td img {
 	/**
 	 * HEADINGS
 	 */
-	
+
 	h1 {
 		font-size: 2.2rem;
 		line-height: 80px;
@@ -112,6 +113,10 @@ td img {
 	h5 {
 		padding: 5px;
 		margin: 30px 0;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: "Roboto";
 	}
 
 	.landing h2 {
@@ -143,7 +148,7 @@ td img {
 
 .btn.btn-link {
 	background: rgba(255,255,255,.4);
-	display: block;	
+	display: block;
 	text-align: center;
 	line-height: 100px;
 	font-size: 2rem;
@@ -417,7 +422,7 @@ a.selected {
 	.columns.landing {
 		min-height: 750px;
 	}
-	
+
 	.sort {
 		max-width: 100%;
 	}
@@ -444,7 +449,7 @@ a.selected {
 	/**
  	* OVERRIDEN FOUNDATION CLASSES
  	*/
-	
+
 	.columns.landing {
 		padding: 20px;
 		border: 0px;
@@ -497,4 +502,3 @@ a.selected {
 		margin: 0px;
 	}
 }
-
