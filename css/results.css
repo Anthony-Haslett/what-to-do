@@ -9,3 +9,19 @@
 	width: 90%;
 	text-align: right;
 }
+
+@media screen and (max-width: 1200px) {
+    
+}
+
+@media screen and (max-width: 1024px) {
+   
+}
+
+@media screen and (max-width: 640px) {
+    .results-sidebar-wrapper,
+    .results-sidebar-wrapper form {
+    	height: 0px;
+	}
+}
+

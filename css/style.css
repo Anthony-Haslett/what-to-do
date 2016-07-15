@@ -2,7 +2,7 @@
  * The last developer had all the css in this one sheet,
  * so I have tried to spit code into seperate files for now for ease of development.
  * At the moment this stylesheet serves as a main one containing code common to all pages.
- * Later we could use a build tool to concat them into 1 file to optimise.
+ * Later we could use a build tool or pre-proccessor to concat them into 1 file if needed.
  **/
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
@@ -64,7 +64,11 @@ footer {
 }
 
 header {
+	height: 80px;
 	background-color: #458CCC;
+	-webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.33);
+	-moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.33);
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.33);
 }
 
 table tbody tr:nth-child(even),
@@ -137,7 +141,7 @@ td img {
 .columns.landing {
 	background-clip: padding-box;
 	padding: 30px 80px;
-	min-height: 680px;
+	min-height: 700px;
 }
 
 .row.expanded .row {
@@ -167,6 +171,9 @@ td img {
 	font-size: 2.2rem;
 }
 
+/**
+ * Custom Slider
+ */
 .slider {
 	padding: 0;
 	background: white;
@@ -181,8 +188,9 @@ td img {
 	text-align: center;
 }
 
+/* white round handle to match material design */
 .slider-handle {
-	background: white;
+	background-color: white;
 	height: 20px;
 	width: 20px;
 	border-radius: 50%;
@@ -193,8 +201,26 @@ td img {
     outline: none;
 }
 
-.slider-handle:hover {
-	background: white;
+/* Grow the handle when hovered/active */
+.slider-handle:hover,
+.slider-handle:active {
+	background-color: white;
+	height: 25px;
+	width: 25px;
+}
+
+/* slider icons */
+i.fa.fa-minus, 
+i.fa.fa-plus {
+    margin-top: 13px;
+}
+
+i.fa.fa-minus {
+    float: right;
+} 
+
+i.fa.fa-plus {
+    float: left;
 }
 
 .mapUk {
@@ -203,7 +229,7 @@ td img {
 	display: block;
 }
 
-#goBtn {
+#go-btn {
 	background: transparent;
 	border: 0;
 	display: block;
@@ -418,6 +444,10 @@ a.selected {
 
 /* end of Sticky Footer */
 
+.mobile-nav {
+	display: none;
+}
+
 /**
  * MEDIA QUERIES
  */
@@ -449,42 +479,49 @@ a.selected {
         margin-left: 10px;
     }
 
-	/**
- 	* OVERRIDEN FOUNDATION CLASSES
- 	*/
-
-	/*.columns.landing {
-		padding: 20px;
-		border: 0px;
-		min-height: 120px;
-	}*/
-
-	/*.columns {
-		width: 100%;
-		border: 0;
-		margin-bottom: 20px;
-	}*/
-
 	.columns.category-list {
 		margin-bottom: 0px;
 		padding-bottom: 0;
 	}
 
-	/*.columns.landing:first-child {
-		margin-bottom: 20px;
-	}*/
+	header {
+		height: auto;
+	}
 
-	/*#goBtn {
-		background: #191919;
-		margin-top: 90px;
-		padding: 20px;
-		width: 100%;
-	}*/
+	.logo {
+		font-size: 1.8rem;
+	}
+
+	/*	 Display mobile navigation	*/
+	.mobile-nav{
+		display: block;
+	}
+
+	/*	 Style the tab links	*/
+	.mobile-nav li {
+		width: 50%;
+		float: left;
+		padding: 5px 0;
+		background-color: #458CCC;
+		border-bottom: solid 4px #458CCC;
+		-o-transition: all .2s ease-in-out;
+		-webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+		transition: all .2s ease-in-out;
+	}
+
+	/*	 ease in bottom border of tab link	*/
+	.mobile-nav li:hover {
+		border-bottom: solid 3px #FFFFFF;
+		transition: all .2s ease-in-out;
+	}
 
 	/**
  	* CUSTOM CLASSES/IDS
  	*/
-
+ 	.clear {
+ 		clear:both;
+ 	}
 
  	.alternativeSearchLabel {
  		display: inline-block;
