@@ -22,70 +22,114 @@
 		<div class="overlay">
 			<div class="expanded row">
 				<!-- side bar -->
-				<div class="small-12 medium-3 large-3 columns results-sidebar-wrapper" id="adjust-search">
+				<div class="small-12 medium-4 large-3 columns results-sidebar-wrapper" id="adjust-search">
 					<aside>
 						<form method="get" action="">
 							<h4>Adjust your search</h4>
-
-							<label>Where are you?</label>
-							<select id="region-dropdown" class="input region" required>
-								<option value="" selected disabled style="display:none">Select Region</option>
-								<option value="scotland">Scotland</option>
-								<option value="north-east">North East</option>
-								<option value="north-west">North West</option>
-								<option value="yorkshire">Yorkshire &amp; Humber</option>
-								<option value="east-midlands">East Midlands</option>
-								<option value="west=midlands">West Midlands</option>
-								<option value="east-of-england">East of England</option>
-								<option value="south-east">South East</option>
-								<option value="south-west">South West</option>
-								<option value="london">London</option>
-							</select>
-							<input type="text" placeholder="Postcode" aria-describedby="exampleHelpText" class="region">
-
-							<label>How far can you travel?</label>
-
-							<div class="slider-container">
-								<div class="slider" data-slider data-initial-start="2" data-end="15" id="travelSlider">
-									<span class="slider-handle"  data-slider-handle role="slider" tabindex="1" id="travelSliderVal"></span>
-									<span class="slider-fill" data-slider-fill></span>
-									<input type="hidden">
-								</div>
-							</div>
-
-							<span class="slider-label value-travel">2 miles</span>
-
-							<label>What's your budget?</label>
-							<div class="slider-container">
-								<div class="slider" data-slider data-initial-start="10" data-initial-end="50" id="budgetSlider">
-									<span class="slider-handle" data-slider-handle role="slider" tabindex="1" id="budgetSliderMin"></span>
-									<span class="slider-fill" data-slider-fill></span>
-									<span class="slider-handle" data-slider-handle role="slider" tabindex="1" id="budgetSliderMax"></span>
-									<input type="hidden">
-									<input type="hidden">
-								</div>
-							</div>
-
-							<span class="slider-label value-budget">£10 - £50</span>
-
-							<h5>Type of activity</h5>
 							<div class="row">
-								<div class="large-6 columns category-list">
-									<ul class="no-bullet category-list">
-										<li><a href="">Amusement Park</a></li>
-										<li><a href="">Nightlife</a></li>
-										<li><a href="">Fun &amp; Games</a></li>
-										<li><a href="" class="selected">Nature &amp; Wildlife</a></li>
-									</ul>
+								<div class="small-12 medium-12 large-12 columns"> 
+									<label>Where are you?</label>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="small-12 medium-12 large-12 columns"> 
+									<select id="region-dropdown" class="input region" required>
+										<option value="" selected disabled style="display:none">Select Region</option>
+										<option value="scotland">Scotland</option>
+										<option value="north-east">North East</option>
+										<option value="north-west">North West</option>
+										<option value="yorkshire">Yorkshire &amp; Humber</option>
+										<option value="east-midlands">East Midlands</option>
+										<option value="west=midlands">West Midlands</option>
+										<option value="east-of-england">East of England</option>
+										<option value="south-east">South East</option>
+										<option value="south-west">South West</option>
+										<option value="london">London</option>
+									</select>
+									<input type="text" placeholder="Postcode" aria-describedby="exampleHelpText" class="region">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="small-12 medium-12 large-12 columns"> 
+									<label>How far can you travel?</label>
+								</div>
+							
+
+								<div class="row">
+									<div class="small-2 medium-2 large-2 columns"> 
+										<i class="fa fa-minus" aria-hidden="true"></i>
+									</div>
+									
+									<div class="small-8 medium-8 large-8 columns"> 
+										<div class="slider-container">
+											<div class="slider" data-slider data-initial-start="2" data-end="15" id="travelSlider">
+												<span class="slider-handle"  data-slider-handle role="slider" tabindex="1" id="travelSliderVal"></span>
+												<span class="slider-fill" data-slider-fill></span>
+												<input type="hidden">
+											</div>
+										</div>
+									</div>
+
+									<div class="small-2 medium-2 large-2 columns"> 
+										<i class="fa fa-plus" aria-hidden="true"></i>
+									</div>
+								</div>
+								<span class="slider-label value-travel">2 miles</span>
+							</div>
+
+							<div class="row">
+								<div class="small-12 medium-12 large-12 columns"> 
+									<label>What's your budget?</label>
+								</div>
+								
+								<div class="row">
+									<div class="small-2 medium-2 large-2 columns"> 
+										<i class="fa fa-minus" aria-hidden="true"></i>
+									</div>
+
+									<div class="small-8 medium-8 large-8 columns"> 
+										<div class="slider-container">
+											<div class="slider" data-slider data-initial-start="10" data-initial-end="50" id="budgetSlider">
+												<span class="slider-handle" data-slider-handle role="slider" tabindex="1" id="budgetSliderMin"></span>
+												<span class="slider-fill" data-slider-fill></span>
+												<span class="slider-handle" data-slider-handle role="slider" tabindex="1" id="budgetSliderMax"></span>
+												<input type="hidden">
+												<input type="hidden">
+											</div>
+										</div>
+									</div>
+									<div class="small-2 medium-2 large-2 columns"> 
+										<i class="fa fa-plus" aria-hidden="true"></i>
+									</div>
+								</div>
+								<span class="slider-label value-budget">£10 - £50</span>
+							</div>
+
+							<div class="row">
+								<div class="small-12 medium-12 large-12 columns">
+									<h5>Type of activity</h5>
 								</div>
 
-								<div class="large-6 columns category-list">
-									<ul class="no-bullet category-list">
-										<li><a href="">Shopping</a></li>
-										<li><a href="">Museums</a></li>
-										<li><a href="">Spa &amp; Fitness</a></li>
-										<li><a href="">Sightseeing</a></li>
-									</ul>
+								<div class="row">
+									<div class="small-12 medium-12 large-6 columns category-list">
+										<ul class="no-bullet category-list">
+											<li>Amusement Park</li>
+											<li>Nightlife</li>
+											<li>Fun &amp; Games</li>
+											<li>Nature &amp; Wildlife</li>
+										</ul>
+									</div>
+
+									<div class="small-12 medium-12 large-6 columns category-list">
+										<ul class="no-bullet category-list">
+											<li>Shopping</li>
+											<li>Museums</li>
+											<li>Spa &amp; Fitness</li>
+											<li>Sightseeing</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</form>
@@ -95,7 +139,7 @@
 
 
 				<!-- first column of results -->
-				<div class="small-12 medium-9 large-9 columns">
+				<div class="small-12 medium-8 large-9 columns">
 					<div class="row expanded">
 						<div class="large-12 columns arrange-wrap">
 							<label>Arrange Results:</label>
@@ -114,7 +158,7 @@
 							</div>
 
 							<div class="small-7 columns">
-								<a href="details.htm"><h2>Venue/Place Name</h2></a>
+								<a href="details.htm"><h2><strong>Venue/Place Name</strong></h2></a>
 								<p class="category">
 									Category of activity
 								</p>
@@ -146,7 +190,7 @@
 							</div>
 
 							<div class="small-7 columns">
-								<a href="details.htm"><h2>Venue/Place Name</h2></a>
+								<a href="details.htm"><h2><strong>Venue/Place Name</strong></h2></a>
 								<p class="category">
 									Category of activity
 								</p>
@@ -178,7 +222,7 @@
 							</div>
 
 							<div class="small-7 columns">
-								<a href="details.htm"><h2>Venue/Place Name</h2></a>
+								<a href="details.htm"><h2><strong>Venue/Place Name</strong></h2></a>
 								<p class="category">
 									Category of activity
 								</p>
@@ -210,7 +254,7 @@
 							</div>
 
 							<div class="small-7 columns">
-								<a href="details.htm"><h2>Venue/Place Name</h2></a>
+								<a href="details.htm"><h2><strong>Venue/Place Name</strong></h2></a>
 								<p class="category">
 									Category of activity
 								</p>
@@ -252,7 +296,7 @@
 							</div>
 
 							<div class="small-7 columns">
-								<a href="details.htm"><h2>Walton Gardens</h2></a>
+								<a href="details.htm"><h2><strong>Walton Gardens</strong></h2></a>
 								<p class="category">
 									Nature &amp; Wildlife
 								</p>
@@ -287,7 +331,7 @@
 							</div>
 
 							<div class="small-7 columns">
-								<a href="details.htm"><h2>Walton Gardens</h2></a>
+								<a href="details.htm"><h2><strong>Walton Gardens</strong></h2></a>
 								<p class="category">
 									Nature &amp; Wildlife
 								</p>
@@ -322,7 +366,7 @@
 							</div>
 
 							<div class="small-7 columns">
-								<h2>Walton Gardens</h2>
+								<h2><strong>Walton Gardens</strong></h2>
 								<p class="category">
 									Nature &amp; Wildlife
 								</p>
@@ -357,7 +401,7 @@
 							</div>
 
 							<div class="small-7 columns">
-								<h2>Walton Gardens</h2>
+								<h2><strong>Walton Gardens</strong></h2>
 								<p class="category">
 									Nature &amp; Wildlife
 								</p>
@@ -393,9 +437,9 @@
 
 							<!-- info result -->
 							<div class="small-7 columns">
-								<h2>Walton Gardens</h2>
+								<h2><strong>Walton Gardens</strong></h2>
 								<p class="category">
-									CNature &amp; Wildlife
+									Nature &amp; Wildlife
 								</p>
 								<table>
 									<tr>
@@ -430,7 +474,7 @@
 				<li><a href="">Contact us</a></li>
 				<li><a href="">About</a></li>
 				<li><a href="">FAQ</a></li>
-				<li><a href="">Terms & Conditions</a></li>
+				<li><a href="">Terms &amp; Conditions</a></li>
 			</ul>
 		</footer>
 
@@ -440,6 +484,7 @@
 		<script src="js/app.js"></script>
 		<script src="js/results.js"></script>
 		<script> 
+
 			/* Clear hides when above 640px width*/
 			window.onresize = function(event) {
 			    if($(window).width() > 640) {
@@ -456,6 +501,15 @@
 				else {
 					$('#adjust-search').show();
 				}
+			});
+
+			/* Applies the selected class to the category when clicked */
+			$('.category-list li').on('click', function() {
+				if($(this).hasClass('selected')) {
+					$(this).removeClass('selected');
+				} else {
+					$(this).addClass('selected');
+				}			
 			});
 		</script>
 	</body>
