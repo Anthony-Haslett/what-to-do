@@ -29,5 +29,9 @@
 		width: 33.3%;
 		margin: 0 auto;
 	}
+
+	.mobile-nav span {
+		margin-right: 10px;
+	}
 }
 

@@ -8,13 +8,14 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.min.css" />
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/results.css">
+		<script src="https://use.fontawesome.com/3b7b8bfebb.js"></script>
 
 	</head>
 	<body>
 		<header class="text-center">
 			<h1><a href="index.htm" class="logo">What to do</a></h1>
 			<ul class="mobile-nav">
-				<li id="adjust-search-link"><a href="#">Adjust Search</a></li>
+				<li id="adjust-search-link"><span class="fa fa-exchange" aria-hidden="true"></span><a href="#">Adjust Search</a></li>
 			</ul>
 		</header>
 
@@ -439,14 +440,21 @@
 		<script src="js/app.js"></script>
 		<script src="js/results.js"></script>
 		<script> 
+			/* Clear hides when above 640px width*/
+			window.onresize = function(event) {
+			    if($(window).width() > 640) {
+					$('#adjust-search').show();			/* Ensures that the adjust search is always */
+				} else {								/* the displayed corectly when the screen is resized */
+					$('#adjust-search').hide();			
+				}
+			};
+
 			$('#adjust-search-link').on('click', function() {
 				if($('#adjust-search:visible').length) {
 					$('#adjust-search').hide();
-					$('#adjust-search form').hide();
 				}
 				else {
 					$('#adjust-search').show();
-					$('#adjust-search form').show();
 				}
 			});
 		</script>
