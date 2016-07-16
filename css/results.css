@@ -21,7 +21,13 @@
 @media screen and (max-width: 640px) {
     .results-sidebar-wrapper,
     .results-sidebar-wrapper form {
-    	height: 0px;
+    	
+	}
+
+	.mobile-nav li {
+		float: none;
+		width: 33.3%;
+		margin: 0 auto;
 	}
 }
 

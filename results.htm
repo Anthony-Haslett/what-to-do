@@ -2,6 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Document</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.min.css" />
 		<link rel="stylesheet" href="css/style.css">
@@ -11,12 +13,15 @@
 	<body>
 		<header class="text-center">
 			<h1><a href="index.htm" class="logo">What to do</a></h1>
+			<ul class="mobile-nav">
+				<li id="adjust-search-link"><a href="#">Adjust Search</a></li>
+			</ul>
 		</header>
 
 		<div class="overlay">
 			<div class="expanded row">
 				<!-- side bar -->
-				<div class="large-3 columns results-sidebar-wrapper">
+				<div class="small-12 medium-3 large-3 columns results-sidebar-wrapper" id="adjust-search">
 					<aside>
 						<form method="get" action="">
 							<h4>Adjust your search</h4>
@@ -89,7 +94,7 @@
 
 
 				<!-- first column of results -->
-				<div class="large-9 columns">
+				<div class="small-12 medium-9 large-9 columns">
 					<div class="row expanded">
 						<div class="large-12 columns arrange-wrap">
 							<label>Arrange Results:</label>
@@ -101,7 +106,6 @@
 					</div>
 
 					<div class="large-6 columns">
-
 					<div class="row">
 						<div class="large-12 columns result">
 							<div class="small-5 columns">
@@ -434,5 +438,17 @@
 		<script src="js/jquery-ui.js"></script>
 		<script src="js/app.js"></script>
 		<script src="js/results.js"></script>
+		<script> 
+			$('#adjust-search-link').on('click', function() {
+				if($('#adjust-search:visible').length) {
+					$('#adjust-search').hide();
+					$('#adjust-search form').hide();
+				}
+				else {
+					$('#adjust-search').show();
+					$('#adjust-search form').show();
+				}
+			});
+		</script>
 	</body>
 </html>
