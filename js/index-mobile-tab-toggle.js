@@ -4,7 +4,7 @@ window.onresize = function(event) {
 		clearHide();
 	} else {								/* Ensures that the region search is always */
 		$('#region-search').hide();			/* the first content to be hidden when in mobile view */
-	}
+	} 
 };
 
  /* Show custom search & region search content */
