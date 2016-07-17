@@ -1,8 +1,3 @@
-/* Needed for sticky footer on this page */
-.sticky-footer, .overlay:after {
-    height: auto;
-}
-
 .rating,
 .tripadvisor-logo {
 	margin-top: 5px;
