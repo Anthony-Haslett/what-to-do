@@ -4,6 +4,10 @@
 	font-weight: bolder;
 	margin-left: 20px;
 }
+.facilities {
+	display: inline-block;
+	width: 49%;
+}
 
 .facilities img {
 	width: 30px;
