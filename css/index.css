@@ -15,8 +15,22 @@
     border-bottom: 40px solid transparent;
 }
 
+.go-btn {
+    background: transparent;
+    border: 0;
+    display: block;
+    margin: auto;
+    font-size: 1.9rem;
+    margin-top: 25px;
+    text-align: center;
+    line-height: 1.5;
+}
+#region-search .go-btn {
+    display: none;
+}
+
 /* Let's Go button hover effect */
-#go-btn:hover {
+.go-btn:hover {
     border-bottom: solid 2px white;
     border-top: solid 2px white;
     -o-transition: all .2s ease-in;
@@ -159,5 +173,34 @@
     #search-header {
         display: none;
     }
+
+    /*   Style the tab links    */
+    .mobile-nav li {
+        width: 50%;
+        float: left;
+        padding: 5px 0;
+        background-color: #458CCC;
+        border-bottom: solid 4px #458CCC;
+        -o-transition: all .2s ease-in-out;
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+    }
+
+    /*   ease in bottom border of tab link  */
+    /* .mobile-nav li:hover {
+        border-color: #FFFFFF;
+        transition: all .2s ease-in-out;
+    } */
+
+    li.nav-selected{
+        border-bottom: solid 4px #FFFFFF;
+    }
+
+    #region-search .go-btn {
+        display: block;
+    }
+
+
 
 }

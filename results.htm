@@ -15,7 +15,7 @@
 		<header class="text-center">
 			<h1><a href="index.htm" class="logo">What to do</a></h1>
 			<ul class="mobile-nav">
-				<li id="adjust-search-link"><span class="fa fa-exchange" aria-hidden="true"></span><a href="#">Adjust Search</a></li>
+				<li id="adjust-search-link" class="nav-selected"><span class="fa fa-exchange" aria-hidden="true"></span><a href="#">Adjust Search</a></li>
 			</ul>
 		</header>
 
@@ -488,17 +488,21 @@
 			window.onresize = function(event) {
 			    if($(window).width() > 640) {
 					$('#adjust-search').show();			/* Ensures that the adjust search is always */
+					$('#adjust-search-link').removeClass('nav-selected');
 				} else {								/* the displayed corectly when the screen is resized */
-					$('#adjust-search').hide();			
+					$('#adjust-search').hide();		
+					$('#adjust-search-link').removeClass('nav-selected');	
 				}
 			};
 
 			$('#adjust-search-link').on('click', function() {
 				if($('#adjust-search:visible').length) {
 					$('#adjust-search').hide();
+					$(this).removeClass('nav-selected');
 				}
 				else {
 					$('#adjust-search').show();
+					$(this).addClass('nav-selected');
 				}
 			});
 
@@ -510,6 +514,15 @@
 					$(this).addClass('selected');
 				}			
 			});
+
+			/* Applies the nav-selected class to the mobile adjust search button when clicked */
+			// $('#adjust-search-link').on('click', function() {
+			// 	if($(this).hasClass('nav-selected')) {
+			// 		$(this).removeClass('nav-selected');
+			// 	} else {
+			// 		$(this).addClass('nav-selected');
+			// 	}			
+			// });
 		</script>
 	</body>
 </html>

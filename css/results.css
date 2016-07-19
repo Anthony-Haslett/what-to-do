@@ -50,7 +50,7 @@ table tbody td, table tbody th {
 }
 
 .selected {
-	background: rgba(255,255,255,0.41);
+	background-color: rgba(255,255,255,0.41);
 	/* box-shadow: 0px 0px 3px rgba(75, 75, 75, 0.66); */
 }
 
@@ -64,6 +64,30 @@ table tbody td, table tbody th {
 	max-width: 20%;
 	color: grey;
 }
+
+/*   Style the tab links    */
+.mobile-nav li {
+    width: 50%;
+    float: left;
+    padding: 5px 0;
+    background-color: #458CCC;
+    border-bottom: solid 4px #458CCC;
+    -o-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+/*   ease in bottom border of tab link  */
+/* .mobile-nav li:hover {
+    border-color: #FFFFFF;
+    transition: all .2s ease-in-out;
+} */
+
+li.nav-selected{
+    border-bottom: solid 4px #FFFFFF;
+}
+
 
 @media screen and (max-width: 1200px) {
     
@@ -93,11 +117,6 @@ table tbody td, table tbody th {
 }
 
 @media screen and (max-width: 640px) {
-    .results-sidebar-wrapper,
-    .results-sidebar-wrapper form {
-    	
-	}
-
 	.mobile-nav li {
 		float: none;
 		width: 33.3%;

@@ -148,19 +148,6 @@ td img {
 	
 }
 
-.btn.btn-link {
-	background: rgba(255,255,255,.4);
-	display: block;
-	text-align: center;
-	line-height: 100px;
-	font-size: 1.5rem;
-	color: white;
-}
-
-.btn.btn-link img {
-	margin-left: 20px;
-}
-
 /**
  * CUSTOM CLASSES/IDS
  */
@@ -227,16 +214,6 @@ i.fa.fa-plus {
 	margin: 0 auto;
 	width: 70%;
 	display: block;
-}
-
-#go-btn {
-	background: transparent;
-	border: 0;
-	display: block;
-	margin: auto;
-	font-size: 1.9rem;
-	margin-top: 25px;
-	text-align: center;
 }
 
 .alternativeSearchLabel {
@@ -325,85 +302,6 @@ i.fa.fa-plus {
 }
 
 
-.details-container {
-	padding: 20px;
-	background-clip: padding-box;
-	border: 20px solid transparent;
-}
-
-.details-container h2 {
-	font-size: 1.5rem;
-}
-
-.details-container td {
-	font-size: 1rem;
-}
-
-.details-container h4 {
-	font-size: 1.5rem;
-	border-bottom: 1px solid white;
-	padding-bottom: 10px;
-	margin-bottom: 30px;
-}
-
-.details-container img {
-	width: 100%;
-}
-
-.details-container .rating,
-.details-container .tripadvisor-logo {
-	width: 180px;
-}
-
-.details-container .tripadvisor-logo {
-	float: left;
-}
-
-.details-container .rating {
-	float: right;
-}
-
-
-.social-links {
-	margin-top: 20px;
-	padding-bottom: 30px;
-	border-bottom: 1px solid white;
-}
-
-.share {
-	margin-top: 10px;
-	margin-bottom: 20px;
-}
-
-.address {
-	margin-top: 20px;
-	border-top: 1px solid white;
-	border-bottom: 1px solid white;
-}
-
-.address p {
-	font-size: 1.1rem;
-	margin: 0;
-}
-
-.address .telephone {
-	margin: 10px 0;
-}
-
-#detailsMap {
-	height: 500px;
-}
-
-.facilities-container {
-	border-bottom: 1px solid white;
-	min-width: 200px;
-	margin: 0 auto;
-	margin-bottom: 20px;
-}
-
-.promotions {
-	border-bottom: 1px solid white;
-}
 
 /* Sticky Footer */
 
@@ -474,25 +372,6 @@ i.fa.fa-plus {
 	/*	 Display mobile navigation	*/
 	.mobile-nav{
 		display: block;
-	}
-
-	/*	 Style the tab links	*/
-	.mobile-nav li {
-		width: 50%;
-		float: left;
-		padding: 5px 0;
-		background-color: #458CCC;
-		border-bottom: solid 4px #458CCC;
-		-o-transition: all .2s ease-in-out;
-		-webkit-transition: all .2s ease-in-out;
-		-moz-transition: all .2s ease-in-out;
-		transition: all .2s ease-in-out;
-	}
-
-	/*	 ease in bottom border of tab link	*/
-	.mobile-nav li:hover {
-		border-bottom: solid 3px #FFFFFF;
-		transition: all .2s ease-in-out;
 	}
 
 	/**
