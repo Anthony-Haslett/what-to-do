@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Document</title>
+		<title>Results</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.min.css" />
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/results.css">
@@ -495,6 +495,7 @@
 				}
 			};
 
+			/* Applies the nav-selected class to the mobile adjust search button when clicked and toggles content */
 			$('#adjust-search-link').on('click', function() {
 				if($('#adjust-search:visible').length) {
 					$('#adjust-search').hide();
@@ -514,15 +515,6 @@
 					$(this).addClass('selected');
 				}			
 			});
-
-			/* Applies the nav-selected class to the mobile adjust search button when clicked */
-			// $('#adjust-search-link').on('click', function() {
-			// 	if($(this).hasClass('nav-selected')) {
-			// 		$(this).removeClass('nav-selected');
-			// 	} else {
-			// 		$(this).addClass('nav-selected');
-			// 	}			
-			// });
 		</script>
 	</body>
 </html>
