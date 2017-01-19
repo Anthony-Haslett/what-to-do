@@ -12,7 +12,7 @@ import './styles/app.scss'
 LocalStorage.test();
 
 var routes = {
-	default: <LoadingScreen />,
+	default: <HomeScreen />,
 	homescreen: <HomeScreen />
 }
 
