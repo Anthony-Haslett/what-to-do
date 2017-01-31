@@ -2,6 +2,7 @@ import Radium from 'radium'
 import React from 'react'
 import color from 'color'
 import Headers from '../elements/Headers'
+import Body from '../elements/Body'
 import Slider from '../elements/Slider'
 var styles = {}, images = {};
 
@@ -25,12 +26,13 @@ class HomeScreen extends React.Component {
 					<p>Headers..</p>
 				</Headers>
 
-				
+				<Body>
 
-				<h1>Home Screen</h1>
+					<h1>Home Screen</h1>
 
-				<Slider />
+					<Slider />
 
+				</Body>
 				
 			</section>
 		)
