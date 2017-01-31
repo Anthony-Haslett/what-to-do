@@ -1,6 +1,7 @@
 import Radium from 'radium'
 import React from 'react'
 import color from 'color'
+import Headers from '../elements/Headers'
 import Slider from '../elements/Slider'
 var styles = {}, images = {};
 
@@ -19,6 +20,12 @@ class HomeScreen extends React.Component {
 	render () {
 		return (
 			<section className="page-home">
+
+				<Headers>
+					<p>Headers..</p>
+				</Headers>
+
+				
 
 				<h1>Home Screen</h1>
 
