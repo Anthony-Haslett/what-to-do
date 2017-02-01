@@ -27,17 +27,13 @@ class HomeScreen extends React.Component {
 
 				<Body>
 
-<<<<<<< HEAD
 					<h1>Home Screen</h1>
 
 					<Slider />
 
 				</Body>
-=======
 
 				<div className="test">Boo!</div>
-
->>>>>>> 3739a80f9b4809dc8d680c09bee52930f868a0ba
 				
 			</section>
 		)
