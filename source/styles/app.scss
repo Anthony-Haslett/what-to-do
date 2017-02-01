@@ -1,3 +1,28 @@
+<<<<<<< HEAD
 @import "defaults";
 @import "components/elements/headers";
 @import "components/elements/body";
+=======
+@import "assets.scss";
+@import "defaults.scss";
+@import "framework.scss";
+
+
+// screens
+@import "screens/HomeScreen.scss";
+
+
+// organisms
+
+
+// elements
+@import "elements/Slider.scss";
+
+
+// atoms
+
+
+
+
+
+>>>>>>> 3739a80f9b4809dc8d680c09bee52930f868a0ba

@@ -36,9 +36,9 @@ class Slider extends React.Component {
 		$(this.refs.slider).mousedown(this.sliderDown.bind(this));
 		$(this.refs.sliderContainer).mouseup(this.sliderUp.bind(this));
 
-		$(this.refs.sliderContainer).touchmove(this.onCursorMove.bind(this));
-		$(this.refs.slider).touchstart(this.sliderDown.bind(this));
-		$(this.refs.sliderContainer).touchend(this.sliderUp.bind(this));
+		$(this.refs.sliderContainer).bind('touchmove', this.onTouchMove.bind(this));
+		$(this.refs.sliderContainer).bind('touchstart', this.sliderDown.bind(this));
+		$(this.refs.sliderContainer).bind('touchend', this.sliderUp.bind(this));
 	
 	}
 
@@ -48,14 +48,11 @@ class Slider extends React.Component {
 		$(this.refs.slider).unbind(this.sliderDown.bind(this));
 		$(this.refs.sliderContainer).unbind(this.sliderUp.bind(this));
 
-		$(this.refs.sliderContainer).unbind(this.onCursorMove.bind(this));
-		$(this.refs.slider).unbind(this.sliderDown.bind(this));
-		$(this.refs.sliderContainer).unbind(this.sliderUp.bind(this));
+		$(this.refs.sliderContainer).unbind('touchmove', this.onTouchMove.bind(this));
+		$(this.refs.sliderContainer).unbind('touchstart', this.sliderDown.bind(this));
+		$(this.refs.sliderContainer).unbind('touchend', this.sliderUp.bind(this));
 
 	}
-
-
-
 
 	sliderDown = (event) => {
 		this.setState({isMovable: true});
@@ -64,8 +61,6 @@ class Slider extends React.Component {
 	sliderUp = (event) => {
 		this.setState({isMovable: false});
 	}
-
-
 
 	onCursorMove = (event) => {
 
@@ -101,33 +96,60 @@ class Slider extends React.Component {
 	}
 
 
-
-	onTouchStart = (event) => {
+	onTouchMove = (event) => {
 
 		var touchEvent = event.touches[0];
 
-		var positionUpdate = {
-			x: touchEvent.screenX,
-			y: touchEvent.screenY
+		var offsets = {
+			left: this.refs.sliderContainer.offsetLeft + (this.refs.slider.clientWidth / 2)
 		}
 
-		console.debug(positionUpdate);
+		var positionUpdate = {
+			x: touchEvent.pageX - offsets.left,
+			y: touchEvent.pageY
+		}
+
+		if(positionUpdate.x < this.refs.sliderContainer.offsetLeft) {
+			positionUpdate.x = this.refs.sliderContainer.offsetLeft;
+		}
+
+		if(positionUpdate.x > this.refs.sliderContainer.offsetLeft + this.refs.hr.clientWidth) {
+			positionUpdate.x = this.refs.sliderContainer.offsetLeft + this.refs.hr.clientWidth;
+		}
+
+		var isMovable = this.state.isMovable;
+
+		if(! isMovable) {
+			return
+		}
+
+		this.setState({cursorPosition: positionUpdate}, () => {
+
+			this.updateSliderPosition(positionUpdate);	
 		
+		});
+
+	}
+
+
+
+	onTouchStart = (event) => {
+		this.setState({isMovable: true});
 	}
 
 	onTouchEnd = (event) => {
-		console.debug('onTouchEnd', event);
+		this.setState({isMovable: false});
 	}
 
 
 
 	updateSliderPosition = (position) => {
 		
-		console.debug(
+		// console.debug(
 
-			position
+		// 	position
 
-		);
+		// );
 
 		// position.x = position.x - 50;
 

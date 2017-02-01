@@ -4,7 +4,6 @@ import color from 'color'
 import Headers from '../elements/Headers'
 import Body from '../elements/Body'
 import Slider from '../elements/Slider'
-var styles = {}, images = {};
 
 @Radium
 class HomeScreen extends React.Component {
@@ -28,11 +27,17 @@ class HomeScreen extends React.Component {
 
 				<Body>
 
+<<<<<<< HEAD
 					<h1>Home Screen</h1>
 
 					<Slider />
 
 				</Body>
+=======
+
+				<div className="test">Boo!</div>
+
+>>>>>>> 3739a80f9b4809dc8d680c09bee52930f868a0ba
 				
 			</section>
 		)
@@ -40,12 +45,5 @@ class HomeScreen extends React.Component {
 
 
 }
-
-
-styles = {
-	container: {
-	}
-}
-
 
 export default HomeScreen
