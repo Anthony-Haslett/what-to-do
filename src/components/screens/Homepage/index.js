@@ -7,7 +7,7 @@ class Homepage extends Component {
     return (
       <div className="page-container">
 
-
+        Homepage
 
       </div>
     )
