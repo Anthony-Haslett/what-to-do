@@ -1,0 +1,8 @@
+/* styles local only to the homepage should do here - no global styles */
+
+
+.page-container {
+    /*
+      for instance, .page-container overrides the globals styles in index.css
+    */
+}
