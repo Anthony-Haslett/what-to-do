@@ -1,13 +1,15 @@
 import Radium from 'radium'
 import React from 'react'
 import color from 'color'
+import Headers from '../elements/Headers'
+import Body from '../elements/Body'
 import Slider from '../elements/Slider'
 
 @Radium
 class HomeScreen extends React.Component {
 
 	constructor(props) {
-		
+
 		super(props);
 
 		this.state = {
@@ -19,14 +21,24 @@ class HomeScreen extends React.Component {
 		return (
 			<section className="page-home">
 
-				<h1>Home Screen</h1>
+				<Headers>
+					<p>Headers..</p>
+				</Headers>
 
-				<Slider />
+				<Body>
 
+					<div className="test">Boo!</div>
+
+						<h1>Home Screen</h1>
+
+						<Slider />
+
+					</div>
+
+				</Body>
 
 				<div className="test">Boo!</div>
 
-				
 			</section>
 		)
 	}

@@ -5,7 +5,6 @@ import color from 'color'
 import Router from './framework/Router'
 import LocalStorage from './framework/LocalStorage'
 import AspectRatio from './framework/AspectRatio'
-import LoadingScreen from './components/screens/LoadingScreen'
 import HomeScreen from './components/screens/HomeScreen'
 import './styles/app.scss'
 
