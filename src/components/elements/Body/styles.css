@@ -1,0 +1,14 @@
+/* styles local only to the homepage should do here - no global styles */
+
+
+.body {
+    /*
+      for instance, .page-container overrides the globals styles in index.css
+    */
+    position: absolute;
+    height: 83%;
+    top: 10%;
+    background-image: url('./assets/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}

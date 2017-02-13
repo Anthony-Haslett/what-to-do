@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Headers from '../../elements/Headers'
+import Body from '../../elements/Body'
 import './styles.css';
 
 class Homepage extends Component {
@@ -7,7 +9,12 @@ class Homepage extends Component {
     return (
       <div className="page-container">
 
-        Homepage
+        <Headers />
+
+        <Body>
+
+        
+        </Body>
 
       </div>
     )
