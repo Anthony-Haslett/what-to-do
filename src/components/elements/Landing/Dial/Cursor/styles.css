@@ -1,0 +1,8 @@
+.cursor-wrapper {
+    background-color: #FFF;
+    border-radius: 100%;
+    height: 2.5em;
+    width: 2.5em;
+    bottom: 1.25em;
+    position: relative;
+}

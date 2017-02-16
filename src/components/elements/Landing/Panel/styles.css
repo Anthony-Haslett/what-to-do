@@ -1,0 +1,11 @@
+.panel-container {
+    background-color: #498DCA;   
+    width: 50%;
+    height: 70%;
+    border-radius: 0.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
