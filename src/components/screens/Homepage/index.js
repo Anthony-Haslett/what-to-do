@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Headers from '../../elements/Headers'
-import Body from '../../elements/Body'
+import Headers from '../../elements/Headers';
+import Body from '../../elements/Body';
+import Panel from '../../elements/Landing/Panel';
 import './styles.css';
 
 class Homepage extends Component {
@@ -12,8 +13,7 @@ class Homepage extends Component {
         <Headers />
 
         <Body>
-
-        
+          <Panel />
         </Body>
 
       </div>
