@@ -1,6 +1,14 @@
 .dial-wrapper {
-    border-top: 1px solid white;
+    /*border-top: 1px solid white;*/
     width: 80%;
     margin: 0;
     padding: 0;
+}
+
+.header-wrapper {
+   position: absolute;
+   width: 80%;
+   border: 1px solid #FFF;
+   left: 10%;
+   top: 40%;
 }
