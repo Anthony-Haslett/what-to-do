@@ -16,8 +16,8 @@ class Dial extends Component {
           },
           
           sliderPosition: {
-              x: parseInt($(this.refs.sliderCursor).css('left')),
-              y: parseInt($(this.refs.sliderCursor).css('top'))
+              x: parseInt($(this.refs.sliderCursor).left),
+              y: parseInt($(this.refs.sliderCursor).top)
           }
       }
   }
@@ -64,9 +64,9 @@ class Dial extends Component {
       positionUpdate.x = this.refs.sliderContainer.offsetLeft  
     }
     
-    if (positionUpdate.x > this.refs.sliderContainer.offsetLeft + this.refs.hr.clientWidth) {
-      positionUpdate.x = this.refs.sliderContainer.offsetLeft + this.refs.hr.clientWidth;  
-    }
+    // if (positionUpdate.x > this.refs.sliderContainer.offsetLeft + this.refs.sliderHeader.clientWidth) {
+    //   positionUpdate.x = this.refs.sliderContainer.offsetLeft + this.refs.sliderHeader.clientWidth;  
+    // }
     
     var isMovable = this.state.isMovable;
     
@@ -95,8 +95,8 @@ class Dial extends Component {
   //     positionUpdate.x = this.refs.sliderContainer.offsetLeft  
   //   }
     
-  //   if (positionUpdate.x > this.refs.sliderContainer.offsetLeft + this.refs.hr.clientWidth) {
-  //     positionUpdate.x = this.refs.sliderContainer.offsetLeft + this.refs.hr.clientWidth;  
+  //   if (positionUpdate.x > this.refs.sliderContainer.offsetLeft + this.refs.sliderHeader.clientWidth) {
+  //     positionUpdate.x = this.refs.sliderContainer.offsetLeft + this.refs.sliderHeader.clientWidth;  
   //   }
     
   //   var isMovable = this.state.isMovable;
@@ -126,9 +126,9 @@ class Dial extends Component {
   
   render() {
     return (
-      <div className="dial-wrapper" refs="sliderContainer">
-        <hr class="header-wrapper" refs="sliderHeader" />
-        <Cursor refs="sliderCursor" />
+      <div className="dial-wrapper" ref="sliderContainer">
+        {/* <hr className="header-wrapper" ref="sliderHeader" /> */}
+        <Cursor ref="sliderCursor" />
       </div>
     )
   }
