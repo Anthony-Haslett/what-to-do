@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import './styles.css';
 
-class Headers extends Component {
-
+class Panel extends Component {
   render() {
     return (
-      <div className="headers">
+      <div className="panel-container">
         {this.props.children}
       </div>
     )
   }
 }
 
-export default Headers;
+export default Panel;

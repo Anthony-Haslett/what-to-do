@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Link, browserHistory } from 'react-router';
+import { Router, Route, browserHistory } from 'react-router';
 import Homepage from './components/screens/Homepage';
 import Results from './components/screens/Results';
 import NoMatch from './components/screens/NoMatch';

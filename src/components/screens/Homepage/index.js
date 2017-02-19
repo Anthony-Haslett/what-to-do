@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Headers from '../../elements/Headers';
 import Body from '../../elements/Body';
-import Panel from '../../elements/Landing/Panel';
+import Panel from '../../organisms/Panel';
+import Slider from '../../organisms/Slider';
+import Searchbar from '../../organisms/Searchbar';
 import './styles.css';
 
 class Homepage extends Component {
@@ -13,9 +15,26 @@ class Homepage extends Component {
         <Headers />
 
         <Body>
-          <Panel />
-        </Body>
 
+          {/* Search Events */}
+          <Panel>
+
+            <h2>Where are you?</h2>
+            <Searchbar />
+
+            <h2>How far can you travel?</h2>
+            <br/>
+
+            <Slider />
+
+            <h2>{"What's your budget?"}</h2>
+            <br/>
+
+            <Slider />
+
+          </Panel>
+
+        </Body>
       </div>
     )
   }
