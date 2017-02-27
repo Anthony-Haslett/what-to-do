@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import './styles.css';
-import Cursor from './Cursor';
 import $ from 'jquery';
+import './styles.css';
+
 
 class Slider extends Component {
+
   constructor(props) {
       super(props);
+
+      this.onCursorMove = this.onCursorMove.bind(this);
+      this.sliderDown = this.sliderDown.bind(this);
+      this.sliderUp = this.sliderUp.bind(this);
 
       this.state = {
           isMovable: false,
@@ -23,9 +28,9 @@ class Slider extends Component {
   }
 
   componentDidMount () {
-    $(this.refs.sliderContainer).mousemove(this.onCursorMove.bind(this));
-    $(this.refs.sliderCursor).mousedown(this.sliderDown.bind(this));
-    $(this.refs.sliderContainer).mouseup(this.sliderUp.bind(this));
+    $(this.refs.sliderContainer).mousemove(this.onCursorMove);
+    $(this.refs.slider).mousedown(this.sliderDown);
+    $(this.refs.sliderContainer).mouseup(this.sliderUp);
 
     // $(this.refs.sliderContainer).bind('touchdown', this.onTouchMove.bind(this));
     // $(this.refs.sliderContainer).bind('touchstart', this.sliderDown.bind(this));
@@ -33,9 +38,9 @@ class Slider extends Component {
   }
 
   componentWillUnmount () {
-    $(this.refs.sliderContainer).unbind(this.onCursorMove.bind(this));
-    $(this.refs.sliderCursor).unbind(this.sliderDown.bind(this));
-    $(this.refs.sliderContainer).unbind(this.sliderUp.bind(this));
+    $(this.refs.sliderContainer).unbind(this.onCursorMove);
+    $(this.refs.slider).unbind(this.sliderDown);
+    $(this.refs.sliderContainer).unbind(this.sliderUp);
 
     // $(this.refs.sliderContainer).unbind('touchdown', this.onTouchMove.bind(this));
     // $(this.refs.sliderContainer).unbind('touchstart', this.sliderDown.bind(this));
@@ -51,8 +56,13 @@ class Slider extends Component {
   }
 
   onCursorMove = (event) => {
+
+    if (! this.state.isMovable) {
+      return;
+    }
+
     var offsets = {
-      left: this.refs.sliderContainer.offsetLeft + (this.refs.sliderCursor.clientWidth / 2)
+      left: this.refs.sliderContainer.offsetLeft + (this.refs.slider.clientWidth / 2)
     }
 
     var positionUpdate = {
@@ -60,23 +70,18 @@ class Slider extends Component {
       y: event.pageY
     }
 
-    if (positionUpdate.x < this.refs.sliderContainer.offsetLeft) {
-      positionUpdate.x = this.refs.sliderContainer.offsetLeft
+    if (positionUpdate.x < 0) {
+      positionUpdate.x = 0
     }
 
-    // if (positionUpdate.x > this.refs.sliderContainer.offsetLeft + this.refs.sliderHeader.clientWidth) {
-    //   positionUpdate.x = this.refs.sliderContainer.offsetLeft + this.refs.sliderHeader.clientWidth;
-    // }
-
-    var isMovable = this.state.isMovable;
-
-    if (!isMovable) {
-      return;
+    if(positionUpdate.x > (this.refs.sliderContainer.clientWidth - this.refs.slider.clientWidth)) {
+      positionUpdate.x = (this.refs.sliderContainer.clientWidth - this.refs.slider.clientWidth);
     }
 
     this.setState({cursorPosition: positionUpdate}, () => {
       this.updateSliderPosition(positionUpdate);
     });
+
   }
 
   // onTouchMove = (event) => {
@@ -119,16 +124,16 @@ class Slider extends Component {
   // }
 
   updateSliderPosition = (position) => {
-
-    console.debug(position);
-    $(this.refs.sliderCursor).css('left', position.x + 'px');
+    $(this.refs.slider).css('left', position.x + 'px');
   }
 
   render() {
     return (
-      <div className="dial-wrapper" ref="sliderContainer">
-        {/* <hr className="header-wrapper" ref="sliderHeader" /> */}
-        <Cursor ref="sliderCursor" />
+      <div className="slider-container" ref="sliderContainer">
+
+        <div className="slider" ref="slider">
+        </div>
+
       </div>
     )
   }
