@@ -16,7 +16,11 @@ class Homepage extends Component {
 
         <Body>
 
-          {/* Search Events */}
+          <div className="sub-header">
+            <h1>Bored? Find activities near you instantly...</h1>
+          </div>
+
+
           <Panel>
 
             <h2>Where are you?</h2>

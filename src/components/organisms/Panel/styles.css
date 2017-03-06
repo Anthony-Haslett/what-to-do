@@ -1,11 +1,8 @@
 .panel-container {
-    background-color: #498DCA;   
+    float: left;
     width: 50%;
     height: 70%;
+    background-color: #498DCA;
     border-radius: 0.2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 1em;
 }

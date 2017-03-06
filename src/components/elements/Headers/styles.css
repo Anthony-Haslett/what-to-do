@@ -2,13 +2,16 @@
 
 
 .headers {
-    /*
-      for instance, .page-container overrides the globals styles in index.css
-    */
-    width: 100%;
-    height: 10%;
-    background-image: url('./assets/logo.png');
-    background-repeat: no-repeat;
-    background-position: 50% 40%;
-    background-size: 4em;
+  /*
+    for instance, .page-container overrides the globals styles in index.css
+  */
+  float: left;
+  width: 100%;
+  height: 10%;
+  text-align: center;
+}
+
+.logo {
+  width: 10%;
+  height: auto;
 }

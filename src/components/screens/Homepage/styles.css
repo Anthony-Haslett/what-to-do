@@ -5,4 +5,16 @@
     /*
       for instance, .page-container overrides the globals styles in index.css
     */
+
+}
+
+
+.sub-header {
+  float: left;
+  width: 100%;
+  height: auto;
+  color: #498DCA;
+  font-size: 0.4em;
+  font-weight: normal;
+  text-align: center;
 }

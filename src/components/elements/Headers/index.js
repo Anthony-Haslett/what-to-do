@@ -6,7 +6,11 @@ class Headers extends Component {
   render() {
     return (
       <div className="headers">
+
+        <img src={require('./assets/logo.png')} className="logo" />
+
         {this.props.children}
+
       </div>
     )
   }
