@@ -21,7 +21,7 @@ class Homepage extends Component {
           </div>
 
 
-          <Panel>
+          <Panel style={{marginLeft:'21%'}}>
 
             <h2>Where are you?</h2>
             <Searchbar />

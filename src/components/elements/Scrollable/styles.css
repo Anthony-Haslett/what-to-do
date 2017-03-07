@@ -1,0 +1,13 @@
+/* styles local only to the homepage should do here - no global styles */
+
+
+.scrollable-body {
+    /*
+      for instance, .page-container overrides the globals styles in index.css
+    */
+    float: left;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
