@@ -5,6 +5,7 @@ class Button extends Component {
 
   static propTypes = {
     children: PropTypes.any,
+    onPress: PropTypes.func,
     color: PropTypes.string,
     disabled: PropTypes.bool
   }
@@ -17,6 +18,12 @@ class Button extends Component {
       isPressed: false
     }
 
+  }
+
+  onPress () {
+    if(this.props.onPress) {
+      this.props.onPress();
+    }
   }
 
   render() {
@@ -35,6 +42,7 @@ class Button extends Component {
     return (
       <button
         style={ buttonStyles }
+        onClick={() => this.onPress()}
         onMouseDown={() => this.setState({isPressed: true})}
         onMouseOut={() => this.setState({isPressed: false})}>
 

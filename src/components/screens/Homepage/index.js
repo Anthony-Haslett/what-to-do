@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
+
+import Slider from '../../organisms/Slider';
+import Searchbar from '../../organisms/Searchbar';
 import Headers from '../../elements/Headers';
 import Body from '../../elements/Body';
 import Panel from '../../organisms/Panel';
-import Slider from '../../organisms/Slider';
-import Searchbar from '../../organisms/Searchbar';
+import Button from '../../elements/Button'
 import './styles.css';
 
+
 class Homepage extends Component {
+
+  onPressExample () {
+    
+    window.location = "/results"
+
+  }
 
   render() {
     return (
@@ -22,6 +31,13 @@ class Homepage extends Component {
 
 
           <Panel style={{marginLeft:'21%'}}>
+
+
+            <Button onPress={() => this.onPressExample()}>
+              Results Screen
+            </Button>
+
+
 
             <h2>Where are you?</h2>
             <Searchbar />

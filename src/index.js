@@ -11,11 +11,11 @@ import './index.css';
 ReactDOM.render((
   <Router history={browserHistory}>
 
-    <Route path="/" component={Testing} />
+    <Route path="/" component={Homepage} />
 
     
-    <Route path="results" component={Results} />
-    <Route path="testing" component={Testing} />
+    <Route path="/results" component={Results} />
+    <Route path="/testing" component={Testing} />
 
     <Route path="*" component={NoMatch}/>
 
