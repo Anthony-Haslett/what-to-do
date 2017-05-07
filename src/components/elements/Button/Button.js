@@ -38,10 +38,12 @@ class Button extends Component {
       buttonStyles.push( Styles.ButtonDisabled );
     }
 
+    // TODO - Bugfix this
+    // style={ buttonStyles }
 
     return (
       <button
-        style={ buttonStyles }
+        style={ Styles.Button }
         onClick={() => this.onPress()}
         onMouseDown={() => this.setState({isPressed: true})}
         onMouseOut={() => this.setState({isPressed: false})}>
