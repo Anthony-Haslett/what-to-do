@@ -3,15 +3,17 @@ module.exports = {
 	Button: {
 		backgroundColor: 'transparent',
 		color: 'white',
+		width: 95,
+		height: 35,
+		fontSize: 18,
+		border: 0,
 	},
 
 	ButtonBackground: {
-		backgroundColor: 'blue',
+		
 	},
 
 	ButtonDisabled: {
 		backgroundColor: 'transparent',
-		color: 'gray'
-	}
-	
-}
+		color: 'white'
+	}}

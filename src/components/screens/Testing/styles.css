@@ -18,3 +18,8 @@
   font-weight: normal;
   text-align: center;
 }
+
+.button{
+  background-color: black;
+  border: none;
+}

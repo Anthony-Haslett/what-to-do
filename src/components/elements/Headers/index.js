@@ -7,8 +7,10 @@ class Headers extends Component {
     return (
       <div className="headers">
 
-        <img src={require('./assets/logo.png')} className="logo" />
 
+   <a href= "/">
+   <img src={require('./assets/logo.png')} className="logo" />
+   </a>
         {this.props.children}
 
       </div>

@@ -18,3 +18,21 @@
   font-weight: normal;
   text-align: center;
 }
+
+h2{
+  height: -75%;
+  width: 55%;
+  margin: auto;
+  padding: 10px;
+  font-size: 100%;
+  text-align: center;
+}
+
+.footer-list{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+  display: inline;
+  float: left;
+}

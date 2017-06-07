@@ -39,7 +39,12 @@ class Button extends Component {
     }
 
     // TODO - Bugfix this
-    // style={ buttonStyles }
+    var styles={
+    backgroundColor: 'transparent',
+    color: 'black',
+    backgroundColor: 'blue',
+
+    };
 
     return (
       <button
